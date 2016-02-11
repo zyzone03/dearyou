@@ -1,0 +1,84 @@
+{% extends 'letter/base.html' %}
+{% load bootstrap3 %}
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+   <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Dear You</h2>
+                <hr>
+            </div>
+            
+            <div class="space"></div>
+            
+            <table>
+                <!--<span class="form-control">{{form}}</span>-->
+            </table>
+            
+            <!--<input type="text" class="form-control" placeholder="Your Name" value={{form.sender_name}}>-->
+
+            <div class="row">
+                <div class="col-md-3">
+                    <address>
+                        <strong>Address</strong><br>
+                        <br>
+                        ThemeForces.Com<br>
+                        Igbalangao, Bugasong, Anitque<br>
+                        5704, Philippines<br>
+                        Phone: (123) 456-7890
+                        <ul class="social">
+                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
+                          </ul>
+                    </address>
+                </div>
+                
+
+
+                <div class="col-md-9">
+
+                    <!--<form autocomplete="off">-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!--<input type='text' class="form-control" placeholder="Your Name">-->
+                                <!--<input type="text" class="form-control" placeholder="Phone No.">-->
+                                <div class='form-control'>
+                                    {% bootstrap_field form.sender_name %}
+                                </div>
+                                <div class='form-control'>
+                                    {% bootstrap_field form.receiver_name %}
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <!--<input type="text" class="form-control" placeholder="Email">-->
+                                <!--<input type="text" class="form-control" placeholder="Subject">-->
+                                <div class='form-control'>
+                                    {% bootstrap_field form.title %}
+                                </div>
+                                <div class='form-control'>
+                                    {% bootstrap_field form.receiver_address %}
+                                </div>
+                            </div>
+                        </div>
+                            <div class='form-control'>
+                                {% bootstrap_field form.content %}
+                            </div>
+                        <!--<textarea class="form-control" rows="4" placeholder="Message"></textarea>-->
+                        <br><br><br>
+                        <input type='submit'>
+                        <!--<div class="text-right">-->
+                        <!--    <a href="#" class="btn send-btn">Send</a>-->
+                        <!--</div>-->
+                    <!--</form>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+    
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'letter/base.html' %}
+
+{% block content %}
+    <form action = "" method = "post">
+    {% csrf_token %}
+    <div style="position:relative;left:10px;background-color:white;">
+        <h1 align=center>로그인</h1><br>
+        <table align=center>
+        {{form.as_table}}
+        </table>
+        <input style='position:relative;left:551px;' type = 'submit'/>
+    </div>
+    </form>
+
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends 'letter/base.html' %}
+
+{% block content %}
+
+    {{me}}'s page
+    
+
+    {% for letter in letter_list %}
+        <p>보낸 사람 : {{letter.title}}</p>
+        <p>내용 : {{letter.content}}</p>
+
+    {% endfor %}
+
+{% endblock content %}

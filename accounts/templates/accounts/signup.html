@@ -1,0 +1,44 @@
+{% extends 'letter/base.html' %}
+
+{% block content %}
+<style>
+/* #myform td {
+  background-color: lightyellow;
+  padding: 5px;
+ }*/
+</style>
+
+ <div style="position:relative;left:10px;background-color:white;">
+    <h1 align=center>회원가입</h1><br>
+    <form action = "" method = "post">
+    {% csrf_token %}
+    {% comment %}
+    <table>
+    {# form.as_table #}
+    </table>
+    {% endcomment %}
+    
+    
+    {% for field in form.hidden_fields %}
+       {{ field }}
+    {% endfor %}
+
+    <table id="myform">
+    {% for field in form.visible_fields %}
+    <tr>
+     <td>{{ field.label }}</td>
+     <td>
+     {{ field }}
+     {{ field.errors }}
+     {{ field.help_text }}
+     </td>
+    </tr>
+    {% endfor %}
+    </table>
+
+    <input style='position:relative;left:900px;' type = 'submit'/>
+    </form>
+</div>
+
+
+{% endblock content %}

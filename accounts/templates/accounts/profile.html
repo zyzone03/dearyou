@@ -1,0 +1,12 @@
+{% extends 'letter/base.html' %}
+{% block content %}
+<p>{{user}}'s profile</p>
+
+{% for letter in letter_list %}
+    {{letter.title}}
+    {{letter.content}}
+{% endfor %}
+
+<p>뿌잉뿌잉</p>
+<h1>is this the profile page??</h1>
+{% endblock %}
