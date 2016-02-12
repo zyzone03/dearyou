@@ -1,14 +1,20 @@
 {% extends 'letter/base.html' %}
 
 {% block content %}
+    <style>
+#myform td {
+  border:1px;
+  padding: 5px;
+}
+    </style>
     <form action = "" method = "post">
     {% csrf_token %}
     <div style="position:relative;left:10px;background-color:white;">
         <h1 align=center>로그인</h1><br>
-        <table align=center>
+        <table id = "myform" align=center>
         {{form.as_table}}
         </table>
-        <input style='position:relative;left:551px;' type = 'submit'/>
+        <input style="position:relative;left:551px;bottom:2px;" type = 'submit'/>
     </div>
     </form>
 

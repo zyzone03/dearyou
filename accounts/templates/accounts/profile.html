@@ -1,12 +1,27 @@
 {% extends 'letter/base.html' %}
 {% block content %}
-<p>{{user}}'s profile</p>
 
-{% for letter in letter_list %}
-    {{letter.title}}
-    {{letter.content}}
-{% endfor %}
+    <div id="contact">
+         <!-- Navigation -->
+        <nav id="menu" data-toggle="offcanvas" data-target=".navmenu">
+            <span class="fa fa-bars"></span>
+        </nav>
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>{{user}}의 마이페이지입니다</h2>
+                <hr>
+            </div>
+            
+            <div class="space"></div>
+            
+    {% for letter in letter_list %}
+        <p>작성시간 : {{letter.created_at}}</p>
+        <p>제목 : {{letter.title}}</p>
+        <p>내용 : {{letter.content}}</p>
+        <br>
+    {% endfor %}
+    
+        </div>
+    </div>
 
-<p>뿌잉뿌잉</p>
-<h1>is this the profile page??</h1>
 {% endblock %}

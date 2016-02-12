@@ -7,3 +7,4 @@ class PostMember(admin.ModelAdmin):
     
 admin.site.register(Member)
 admin.site.register(Letter)
+admin.site.register(Contact)

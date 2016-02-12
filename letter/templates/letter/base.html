@@ -51,8 +51,6 @@
     <![endif]-->
   </head>
   <body>
-
-    
         <div class="navmenu navmenu-default navmenu-fixed-left offcanvas"> <!--- Off Canvas Side Menu -->
             <div class="close" data-toggle="offcanvas" data-target=".navmenu">
                 <span class="fa fa-close"></span>
@@ -60,13 +58,13 @@
             <div class="add-margin"></div>
             <ul class="nav navmenu-nav"> <!--- Menu -->
                 <li><a href="/" class="page-scroll">Home</a></li>
-                <li><a href="/mypage" class="page-scroll">Mypage</a></li>
-                <li><a href="#services" class="page-scroll">서비스 소개</a></li>
-                <li><a href="#about-us" class="page-scroll">팀 소개</a></li>
+                <!--<li><a href="/mypage" class="page-scroll">Mypage</a></li>-->
+                <li><a href="#services" class="page-scroll">About Service</a></li>
+                <li><a href="#about-us" class="page-scroll">About Team</a></li>
                 <li><a href="#contact" class="page-scroll">Contact Us</a></li>
                 <li class='page-scroll'>-----------------------</li>
                 {% if user.is_authenticated %}
-                <li><a href="/accounts/profile" class="page-scroll">Profile</a></li>
+                <li><a href="/accounts/profile" class="page-scroll">My page</a></li>
                 <li><a href="/accounts/logout" class="page-scroll">Logout</a></li>
 
                 {% else %}
@@ -77,14 +75,18 @@
                 
             </ul><!--- End Menu -->
         </div> <!--- End Off Canvas Side Menu -->
-
+        
+          
+           
+         
+        
     {% block content %}
     {% endblock %}
 
     <nav id="footer">
         <div class="container">
              <div class="pull-left">
-                <p>2014 © Arcadia. All Rights Reserved. Coded by <a href="https://dribbble.com/jennpereira">Jenn</a> & Designed by <a href="https://dribbble.com/alanpodemski">Alan</a></p>
+                <p>2016 ©Dearyou. All Rights Reserved. Coded by & Designed by Dearyou.</p>
             </div>
             <div class="pull-right"> 
                 <a href="/" class="page-scroll">Back to Home <span class="fa fa-angle-up"></span></a>

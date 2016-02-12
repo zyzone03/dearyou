@@ -1,0 +1,26 @@
+{% extends 'letter/base.html' %}
+
+{% block content %}
+<div id="detail" style="padding-bottom:60px;">
+    
+    <div class="container text-center" style="color:black; font-family:'Nanum Pen Script', cursive;">
+        <!-- Navigation -->
+        <nav id="menu" data-toggle="offcanvas" data-target=".navmenu">
+            <span class="fa fa-bars"></span>
+        </nav>
+
+        <div class="container">
+            <h4 style="font-size:60px;">{{letter.title}}</h4>
+        </div>
+        <div style="text-align:left; font-size:40px">
+            Dear {{letter.receiver_name}}
+        </div>
+        <div class='panel-body' style="font-size:30px; text-align:left;">
+            {{letter.content|linebreaks }}
+        </div>
+        <div style="text-align:right; font-size:40px">
+            Sincerely yours {{letter.sender_name}}
+        </div>
+    </div>
+</div>
+{% endblock content %}

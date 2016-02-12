@@ -2,10 +2,10 @@
 
 {% block content %}
 <style>
-/* #myform td {
-  background-color: lightyellow;
+#myform td {
+  border:1px;
   padding: 5px;
- }*/
+}
 </style>
 
  <div style="position:relative;left:10px;background-color:white;">
@@ -23,10 +23,10 @@
        {{ field }}
     {% endfor %}
 
-    <table id="myform">
+    <table id="myform" align=center>
     {% for field in form.visible_fields %}
     <tr>
-     <td>{{ field.label }}</td>
+     <td>{{ field.label }}:</td>
      <td>
      {{ field }}
      {{ field.errors }}
@@ -36,7 +36,7 @@
     {% endfor %}
     </table>
 
-    <input style='position:relative;left:900px;' type = 'submit'/>
+    <input style='position:relative;left:840px;bottom=2px;' type = 'submit'/>
     </form>
 </div>
 

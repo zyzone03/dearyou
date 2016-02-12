@@ -1,4 +1,5 @@
 {% extends 'letter/base.html' %}
+{% load bootstrap3 %}
 {% load staticfiles %}
 {% block content %}
 
@@ -21,7 +22,7 @@
             </div>
 
             <a href="/letter/new" class="down-btn page-scroll">
-                <span class="fa fa-angle">편지쓰기</span>
+                <span class="fa fa-angle" style="font-size:36px; padding:10px 30px 10px 30px;">편지쓰기</span>
             </a>
         </div>
     </div>
@@ -32,10 +33,10 @@
             <div class="row text-center">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="section-title">
-                        <h2>Meet Us</h2>
+                        <h2>신개념 편지 서비스</h2>
                         <hr>
                     </div>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                    <p>아래 내용을 확인하세요.</p>
                     <a href="#services" class="down-btn page-scroll">
                         <span class="fa fa-angle-down"></span>
                     </a>
@@ -47,7 +48,7 @@
     <!-- Overview Video Section -->
     <div id="overview-video">
         <div class="overlay">
-            <embed src='{% static "img/intro2.mp4" %}' style="width:853px; height:480px;">
+            <embed src='{% static "img/intro.mp4" %}' style="width:853px; height:480px;">
             <div class="container">
             </div>
         </div>
@@ -102,7 +103,7 @@
     <!-- Call-to-Action Section -->
     <div id="cta">
         <div class="container text-center">
-            <a href="#" class="btn go-to-btn">Check our shop</a>
+            <a href="#works" class="btn go-to-btn">Check our process</a>
         </div>
     </div>
 
@@ -125,7 +126,7 @@
                 <div class="col-md-3 col-sm-6 nopadding">
                     <div class="portfolio-item">
                         <div class="hover-bg">
-                            <a href="#">
+                            <a href="">
                                 <div class="hover-text">
                                     <h5>보안</h5>
                                     <p class="lead lead-k">편지내용 암호화</p>
@@ -139,7 +140,7 @@
                 <div class="col-md-3 col-sm-6 nopadding">
                     <div class="portfolio-item">
                         <div class="hover-bg">
-                            <a href="#">
+                            <a href="">
                                 <div class="hover-text">
                                     <h5>보안</h5>
                                     <p class="lead lead-k">인장으로 봉인</p>
@@ -153,7 +154,7 @@
                 <div class="col-md-3 col-sm-6 nopadding">
                     <div class="portfolio-item">
                         <div class="hover-bg">
-                            <a href="#">
+                            <a href="">
                                 <div class="hover-text">
                                     <h5>철저한 관리</h5>
                                     <p class="lead lead-k">배송추적</p>
@@ -167,7 +168,7 @@
                 <div class="col-md-3 col-sm-6 nopadding">
                     <div class="portfolio-item">
                         <div class="hover-bg">
-                            <a href="#">
+                            <a href="">
                                 <div class="hover-text">
                                     <h5>철저한 관리</h5>
                                     <p class="lead lead-k">보낸편지 DB제공</p>
@@ -182,7 +183,7 @@
         </div>
         <div class="space"></div>
         <div class="text-center">
-            <a href="#" class="btn read-more-btn">Check on Dribbble</a>
+            <a href="#clients" class="btn read-more-btn">Check our partners</a>
             <br>
             <a href="#about-us" class="down-btn page-scroll"><span class="fa fa-angle-down"></span></a>
         </div>
@@ -225,7 +226,7 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-3">
                             <div class="team">
-                                <img src='{% static "img/team/02.jpg" %}' class="img-responsive img-circle" alt="...">
+                                <img src='{% static "img/team/01.jpg" %}' class="img-responsive img-circle" alt="...">
                                 <br>
                                 <h4>송준혁</h4>
                                 <p class="small">CEO/Founder</p>
@@ -235,7 +236,7 @@
 
                         <div class="col-md-3 col-sm-3">
                             <div class="team">
-                                <img src='{% static "img/team/04.jpg" %}' class="img-responsive img-circle" alt="...">
+                                <img src='{% static "img/team/02.jpg" %}' class="img-responsive img-circle" alt="...">
                                 <br>
                                 <h4>권일</h4>
                                 <p class="small">COO/Co-Founder</p>
@@ -248,17 +249,17 @@
                                 <img src='{% static "img/team/03.jpg" %}' class="img-responsive img-circle" alt="...">
                                 <br>
                                 <h4>장한</h4>
-                                <p class="small">CMO</p>
+                                <p class="small">CMO<br>바지사장</p>
                                 <hr>
                             </div>
                         </div>
                         
                         <div class="col-md-3 col-sm-3">
                             <div class="team">
-                                <img src='{% static "img/team/03.jpg" %}' class="img-responsive img-circle" alt="...">
+                                <img src='{% static "img/team/04.jpg" %}' class="img-responsive img-circle" alt="...">
                                 <br>
                                 <h4>이동주</h4>
-                                <p class="small">CFO</p>
+                                <p class="small">Chief Financial Officer<br>Chief Technology Officer<br>Majority StakeHolder<br>오너</p>
                                 <hr>
                             </div>
                         </div>
@@ -289,21 +290,22 @@
 
                 <div id="testimonial" class="owl-carousel owl-theme">
                   <div class="item">
-                    <h3>Et iusto odio dignissimos ducimus qui blanditiis <br>praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint <br>occaecati cupiditate non provident. </h3>
+                    <h3>What a great Service!!!! <br>군대간 남친 편지 보내기 너무 쉬워졌어요! <br>
+                    생일, 기념일에 손편지 보내기 너무 힘든데 이거 쓰니 편해졌어요! </h3>
                     <br>
-                    <h6>LJ, Abc Company</h6>
+                    <h6>얼마 전 곰신이 된 양OO씨</h6>
                   </div>
 
                   <div class="item">
-                    <h3>Fusce dapibus, tellus ac cursus commodo, tortor<br> mauris condimentum. Duis mollis, est non commodo luctus, nisi erat </h3>
+                    <h3>신년인사는 DearYou!!<br>오랜만에 신년인사를 Dearyou로 해봤어요.<br>받으신 분들 반응이 너무 좋아요! </h3>
                     <br>
-                    <h6>Kai, Web Geekster</h6>
+                    <h6>근 2년간 잠수탄 김OO씨</h6>
                   </div>
 
                   <div class="item">
-                    <h3>Cras justo odio, dapibus ac facilisis in, egestas <br>eget quam. Donec id elit non mi porta gravida at eget metus.</h3>
+                    <h3>손 편지 같아요!<br>여자친구한테 편지를 보내봤어요.<br>손편지만큼 감동한 듯 반응이 좋네요.</h3>
                     <br>
-                    <h6>Jenn, Coders' Playground</h6>
+                    <h6>편지쓰기가 귀찮은 권O씨</h6>
                   </div>
                 </div>
             </div>
@@ -324,10 +326,10 @@
                     <address>
                         <strong>Address</strong><br>
                         <br>
-                        ThemeForces.Com<br>
-                        Igbalangao, Bugasong, Anitque<br>
-                        5704, Philippines<br>
-                        Phone: (123) 456-7890
+                        서울특별시<br>
+                        관악구 낙성대동<br>
+                        1626-45번지<br>
+                        Phone: (010)2428-1833
                         <ul class="social">
                             <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                             <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
@@ -338,20 +340,38 @@
                 </div>
 
                 <div class="col-md-9">
-                    <form autocomplete="off">
+                    <form autocomplete="off" method="POST">
+                        {% csrf_token %}
                         <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Your Name">
-                                <input type="text" class="form-control" placeholder="Phone No.">
+                            
+                            <div class='col-md-6'>
+                                {% bootstrap_field form.name %}
+                            </div>
+                            <div class='col-md-6'>
+                                {% bootstrap_field form.email %}
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Email">
-                                <input type="text" class="form-control" placeholder="Subject">
+                                {% bootstrap_field form.phone %} 
+                            </div>
+                            <div class="col-md-12">
+                                {% bootstrap_field form.title %}
                             </div>
                         </div>
-                        <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+                            message
+                            {% bootstrap_field form.message %}
+                            <!--<textarea class="form-control" rows="4" placeholder="Message"></textarea>-->
                         <div class="text-right">
-                            <a href="#" class="btn send-btn">Send</a>
+                        <input type='submit' class='btn send-btn' style='
+                        text-transform: uppercase;
+                    	background: #c59a6d;
+                    	color: #282f35;
+                    	padding: 15px 35px;
+                    	border-radius: 0;
+                    	font-size: 12px;
+                    	color: #ffffff;
+                    	transition: all 0.5s;
+                        '
+                        value="Send">
                         </div>
                     </form>
                 </div>

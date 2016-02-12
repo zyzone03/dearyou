@@ -24,8 +24,10 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
     url(r'^letter/new$', views.letter_new),
-    url(r'^mypage/(?P<pk>\d+)$', views.mypage),
+    url(r'^letter/confirm$', views.letter_new),
+    # url(r'^mypage/(?P<pk>\d+)$', views.mypage),
     url(r'^accounts/', include('accounts.urls')),
+    url(r'^letter/(?P<pk>\d+)/$','letter.views.preview'),
     
 ]
 
